@@ -1,0 +1,61 @@
+.hotelcard_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotelcard {
+  display: flex;
+  margin-top: 5rem;
+  width: 80%;
+  padding: 20px;
+  border: 2px solid rgba(214, 145, 42, 0.37);
+  border-radius: 3px;
+
+  &_atc_btn {
+    margin-top: 40px;
+    height: 40px;
+    width: 30%;
+    color: white;
+    background-color: rgba(214, 145, 42, 1);
+    border: 2px solid transparent;
+    transition: ease 0.4s;
+
+    &:hover {
+      width: 35%;
+      transition: 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 850px) {
+      width: 70%;
+
+      &:hover {
+        width: 85%;
+      }
+    }
+  }
+
+  &_description {
+    width: 80%;
+  }
+
+  &_title {
+    font-weight: bolder;
+    font-size: 32px;
+    color: rgba(57, 116, 203, 1);
+  }
+
+  &_location {
+    text-decoration: underline;
+    padding: 0px 0px 30px 0px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+
+  &_img {
+    margin-right: 10px;
+  }
+}

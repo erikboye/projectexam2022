@@ -1,0 +1,48 @@
+.contact {
+  height: 100vh;
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+
+    @media screen and (max-width: 1300px) {
+      display: block;
+    }
+  }
+
+  &_contactform {
+    padding: 20px;
+    margin: 100px 0px 100px 0px;
+    border-top: 2px solid #9f8561;
+
+    @media screen and (max-width: 1300px) {
+      margin: 40px 0px 0px 0px;
+      border-top: 4px solid #9f8561;
+    }
+  }
+
+  &_title {
+    font-size: 2rem;
+    color: rgba(57, 116, 203, 1);
+    justify-content: center;
+
+    @media screen and (max-width: 1300px) {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &_phone {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &_icon {
+    font-size: 25px;
+  }
+  &_sendbtn {
+    background-color: rgba(214, 145, 42, 1);
+  }
+}

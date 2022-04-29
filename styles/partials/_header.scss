@@ -1,0 +1,40 @@
+.Header {
+  background-color: rgba(34, 36, 74, 1);
+
+  &__Nav a {
+    font-family: "Montserrat";
+    font-weight: 100;
+    margin-left: 100px;
+
+    &:hover {
+      transform: var(--bounce);
+      transition: var(--transition);
+      background-color: rgba(214, 145, 42, 1);
+      color: rgba(34, 36, 74, 1);
+      font-weight: 500;
+    }
+  }
+
+  .Header__Nav {
+    @media screen and (max-width: 1024px) {
+      max-width: 200px;
+      margin: auto;
+      margin-right: 50px;
+    }
+    @media screen and (max-width: 800px) {
+      max-width: 200px;
+      margin: auto;
+      margin-right: 50px;
+    }
+  }
+
+  &__Text {
+    font-size: 2rem;
+    font-family: "Major Mono Display", monospace;
+    color: rgba(214, 145, 42, 1);
+
+    @media screen and (max-width: 640px) {
+      font-size: 1rem;
+    }
+  }
+}

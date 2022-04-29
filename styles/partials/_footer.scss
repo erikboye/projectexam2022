@@ -1,0 +1,38 @@
+.footer {
+  background-color: rgba(34, 36, 74, 1);
+  height: 150px;
+  padding: 50px 50px 0px 50px;
+
+  &_icon,
+  &_title {
+    color: rgba(214, 145, 42, 0.8);
+    font-size: 2rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+  &_title {
+    font-family: "Major Mono Display", monospace;
+  }
+
+  &_icon_wrapper {
+    display: flex;
+  }
+
+  &_upperSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_underSection {
+    text-align: center;
+    color: rgba(214, 145, 42, 0.8);
+
+    @media screen and (max-width: 800px) {
+      padding-top: 30px;
+      font-size: 10px;
+    }
+  }
+}
