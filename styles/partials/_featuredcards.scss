@@ -1,0 +1,63 @@
+.featured {
+  padding: 20px;
+  display: flex;
+  text-align: center;
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+
+  &_card {
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 2px solid rgba(214, 145, 42, 0.3);
+    background-color: rgba(159, 159, 159, 0.116);
+    justify-content: space-between;
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+  }
+  &_img_div {
+    padding: 10px;
+  }
+
+  &_title {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  &_description {
+    padding: 10px;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  &_staricons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_btn {
+    height: 40px;
+    width: 25%;
+    color: white;
+    background-color: rgb(214, 145, 42);
+    border: 2px solid transparent;
+    transition: ease 0.4s;
+    margin-top: 50px;
+
+    &:hover {
+      width: 40%;
+      transition: 0.3s ease-in-out;
+      border-radius: 2px;
+    }
+  }
+}

@@ -7,14 +7,18 @@
 
 .hotelcard {
   display: flex;
-  margin-top: 5rem;
-  width: 80%;
-  padding: 20px;
-  border: 2px solid rgba(214, 145, 42, 0.37);
-  border-radius: 3px;
+  margin-top: 4rem;
+  width: 90%;
+  padding: 20px 20px 80px 0px;
+  border-bottom: 2px solid rgba(214, 145, 42, 0.37);
+
+  &_textdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &_atc_btn {
-    margin-top: 40px;
     height: 40px;
     width: 30%;
     color: white;
@@ -38,6 +42,7 @@
 
   &_description {
     width: 80%;
+    font-weight: 300;
   }
 
   &_title {
@@ -48,7 +53,7 @@
 
   &_location {
     text-decoration: underline;
-    padding: 0px 0px 30px 0px;
+    padding: 10px 0px 20px 0px;
   }
 
   @media screen and (max-width: 1200px) {
@@ -56,6 +61,11 @@
   }
 
   &_img {
-    margin-right: 10px;
+    margin-right: 20px;
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

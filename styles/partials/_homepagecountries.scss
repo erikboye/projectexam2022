@@ -56,26 +56,3 @@
   grid-column: 4/7;
   grid-row: 2/2;
 }
-
-// .column {
-//   display: flex;
-//   justify-content: center;
-//   flex: column;
-//   flex: 25%;
-//   margin: 5px 0;
-
-//   & span {
-//     margin: 0 10px 0 0 !important;
-//   }
-
-//   @media screen and (max-width: 600px) {
-//     flex: 100%;
-//     max-width: 100%;
-//   }
-
-//   .column img {
-//     margin-top: 8px;
-//     vertical-align: middle;
-//     width: 100%;
-//   }
-// }

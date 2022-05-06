@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function SignIn() {
   return (
@@ -38,7 +39,7 @@ function SignIn() {
                 ></input>
               </div>
               <div className="w-full flex items-center justify-between px-3 mb-3 ">
-                <label for="remember" className="flex items-center w-1/2">
+                <label htmlFor="remember" className="flex items-center w-1/2">
                   <input
                     type="checkbox"
                     name=""
@@ -55,11 +56,15 @@ function SignIn() {
                   </a>
                 </div>
               </div>
-              <div className="w-full md:w-full px-3 mb-6">
-                <button className="signIn_btn appearance-none block w-full  text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green-500 focus:outline-none focus:bg-white focus:border-gray-500">
-                  Sign in
-                </button>
-              </div>
+              <Link href={`/dashboard`}>
+                <div className="w-full md:w-full px-3 mb-6">
+                  <a>
+                    <button className="signIn_btn appearance-none block w-full  text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-orange-500 focus:outline-none focus:bg-white focus:border-gray-500">
+                      Sign in
+                    </button>
+                  </a>
+                </div>
+              </Link>
               <div className="mx-auto -mb-6 pb-1">
                 <span className="text-center text-xs text-gray-700">
                   or sign up with

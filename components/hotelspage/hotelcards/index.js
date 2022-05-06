@@ -14,13 +14,15 @@ function HotelCardsComponent({ id, imageurl, description, title, location }) {
           loader={myLoader}
           src={imageurl}
           alt="pic"
-          width={690}
-          height={550}
+          width={800}
+          height={600}
         />
       </div>
       <div className="hotelcard_textdiv">
-        <p className="hotelcard_title">{title}</p>
-        <p className="hotelcard_location">{location}</p>
+        <div>
+          <p className="hotelcard_title">{title}</p>
+          <p className="hotelcard_location">{location}</p>
+        </div>
         <p className="hotelcard_description">{description}</p>
         <Link href={`/${id}`}>
           <a>

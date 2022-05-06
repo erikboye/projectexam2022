@@ -12,6 +12,14 @@
     }
   }
 
+  &_text {
+    margin-bottom: 230px;
+
+    @media screen and (max-width: 1300px) {
+      margin-bottom: 50px;
+    }
+  }
+
   &_contactform {
     padding: 20px;
     margin: 100px 0px 100px 0px;
@@ -32,6 +40,10 @@
       margin-top: 20px;
       font-size: 1.2rem;
     }
+  }
+
+  &_description {
+    width: 80%;
   }
 
   &_phone {

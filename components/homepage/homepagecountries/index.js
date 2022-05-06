@@ -10,7 +10,7 @@ function HomepageCountries() {
           height="400"
           width="550"
           alt="Image of Norway"
-          src="/../public/img/mexico.jpg"
+          src="/img/mexico.jpg"
         />
       </div>
       <div className="portugal">
@@ -19,7 +19,7 @@ function HomepageCountries() {
           height="400"
           width="550"
           alt="Image of Portugal"
-          src="/../public/img/portugal.jpg"
+          src="/img/portugal.jpg"
         />
       </div>
       <div className="sweden">
@@ -28,7 +28,7 @@ function HomepageCountries() {
           height="400"
           width="550"
           alt="Image of Sweden"
-          src="/../public/img/sweden.jpg"
+          src="/img/sweden.jpg"
         />
       </div>
       <div className="denmark">
@@ -37,7 +37,7 @@ function HomepageCountries() {
           height="400"
           width="700"
           alt="Image of Denmark"
-          src="/../public/img/denmark.jpg"
+          src="/img/denmark.jpg"
         />
       </div>
       <div className="norway">
@@ -46,17 +46,9 @@ function HomepageCountries() {
           height="400"
           width="800"
           alt="Image of Norway"
-          src="/../public/img/norway.jpg"
+          src="/img/norway.jpg"
         />
       </div>
-      {/* <div className="egypt">
-        <Image
-          height="400"
-          width="550"
-          alt="Image of Sweden"
-          src="/../public/img/egypt.jpg"
-        />
-      </div> */}
     </div>
   );
 }
