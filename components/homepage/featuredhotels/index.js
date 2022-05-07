@@ -41,6 +41,7 @@ const FeaturedHotelCards = () => {
                         <p className="featured_title">{title}</p>
                         <p className="featured_description">{location}</p>
                         <p className="featured_description">{description}</p>
+
                         <div className="featured_staricons">
                           <Icon
                             className="details_starIcon"

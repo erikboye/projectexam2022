@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 // import Link from "next/link";
 
 export const getStaticProps = async () => {
@@ -28,7 +29,7 @@ function DashboardPage() {
               <th scope="col">Delete Product</th>
             </tr>
           </thead>
-          <tbody className="tableBody"></tbody>
+          <tbody className="dashboard_table"></tbody>
         </table>
       </div>
     </div>
