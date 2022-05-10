@@ -1,26 +1,27 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import Select from "react-dropdown-select";
+import { useState, useEffect } from "react";
 
 function Alternatives() {
   return (
     <div className="p-10">
       <div className="container mx-auto flex justify-center items-center p-2 md:p-0">
         <div className="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg">
-          {/* SEARCHBAR */}
+          {/* SEARCHBAR HOTELPAGE */}
           <form className="d-flex searchbar mx-auto">
-            <input
-              id="searchInput"
-              className="form-control me-2"
-              type="search"
-              placeholder="Search for a hotel..."
-              aria-label="Search"
-            />
-            <button
-              className="alternatives_searchbtn btn-outline-success"
-              type="submit"
-            >
-              Search
-            </button>
+            <div className="alternatives_wrapper">
+              {/* <Select
+                options={hotels.map.title}
+                onChange={(values) => this.setValues(values)}
+              /> */}
+              <button
+                className="alternatives_searchbtn btn-outline-success"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
           </form>
           <div className="flex flex-col md:flex-row"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

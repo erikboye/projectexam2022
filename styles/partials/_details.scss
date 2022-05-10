@@ -18,7 +18,7 @@
     max-height: 470px;
 
     @media screen and (max-width: 1200px) {
-      align-self: center;
+      margin: auto;
     }
   }
 
@@ -28,6 +28,7 @@
 
     @media screen and (max-width: 1200px) {
       width: 100%;
+      margin: auto;
     }
   }
 
@@ -162,8 +163,15 @@
     }
   }
 
+  &_googlemapdiv {
+    max-width: 500px;
+  }
+
   &_map {
-    min-width: 500px;
-    min-height: 250px;
+    width: 100%;
+
+    @media screen and (max-width: 667px) {
+      min-width: 50px;
+    }
   }
 }

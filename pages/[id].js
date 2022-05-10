@@ -105,7 +105,7 @@ const Details = ({
           <h3 className="infoabout_title">Learn more about this place</h3>
           <p className="infoabout_description">{infoabout}</p>
         </div>
-        <div>
+        <div className="infoabout_googlemapdiv">
           <img className="infoabout_map" src={map}></img>
         </div>
       </div>

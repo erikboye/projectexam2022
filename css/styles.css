@@ -536,6 +536,12 @@ a {
   }
 }
 
+.alternatives_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .details {
   margin: auto;
   width: 80%;
@@ -569,9 +575,7 @@ a {
 
 @media screen and (max-width: 1200px) {
   .details_img {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin: auto;
   }
 }
 
@@ -583,6 +587,7 @@ a {
 @media screen and (max-width: 1200px) {
   .details_text_div {
     width: 100%;
+    margin: auto;
   }
 }
 
@@ -744,9 +749,18 @@ a {
   }
 }
 
+.infoabout_googlemapdiv {
+  max-width: 500px;
+}
+
 .infoabout_map {
-  min-width: 500px;
-  min-height: 250px;
+  width: 100%;
+}
+
+@media screen and (max-width: 667px) {
+  .infoabout_map {
+    min-width: 50px;
+  }
 }
 
 .contact {
