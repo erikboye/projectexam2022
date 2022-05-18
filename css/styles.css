@@ -461,6 +461,13 @@ a {
   border-bottom: 2px solid rgba(214, 145, 42, 0.37);
 }
 
+@media screen and (max-width: 1200px) {
+  .hotelcard {
+    display: block;
+    text-align: center;
+  }
+}
+
 .hotelcard_textdiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,21 +511,27 @@ a {
   font-weight: 300;
 }
 
+@media screen and (max-width: 850px) {
+  .hotelcard_description {
+    width: 100%;
+  }
+}
+
 .hotelcard_title {
   font-weight: bolder;
   font-size: 32px;
   color: #3974cb;
 }
 
+@media screen and (max-width: 850px) {
+  .hotelcard_title {
+    font-size: 24px;
+  }
+}
+
 .hotelcard_location {
   text-decoration: underline;
   padding: 10px 0px 20px 0px;
-}
-
-@media screen and (max-width: 1200px) {
-  .hotelcard {
-    display: block;
-  }
 }
 
 .hotelcard_img {
@@ -559,13 +572,11 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .details_img_div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+}
+
+@media screen and (max-width: 1200px) and (max-width: 800px) {
+  .details {
+    width: 100%;
   }
 }
 
@@ -690,17 +701,17 @@ a {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1370px) {
-  .details_infowrapper {
-    margin-top: 30px;
-  }
-}
-
 .details_icon {
   height: 30px;
   width: 30px;
   color: black;
   margin: auto;
+}
+
+@media screen and (max-width: 520px) {
+  .details_icon {
+    margin-top: 30px;
+  }
 }
 
 .details_icontext {
@@ -873,6 +884,204 @@ a {
 
 .dashboard_head_button:hover {
   color: black;
+}
+
+.checkout_wrapper {
+  padding: 3rem 0px 5rem 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1330px) {
+  .checkout_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.checkout_leftside {
+  padding-top: 5rem;
+  background-color: #7073a0;
+  width: 45%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1330px) {
+  .checkout_leftside {
+    margin: auto;
+    width: 85%;
+  }
+}
+
+.checkout_leftside_heading {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_heading {
+    font-size: 32px;
+  }
+}
+
+.checkout_leftside_miniheading_div {
+  padding: 2rem 0px 5rem 0px;
+}
+
+.checkout_leftside_features {
+  width: 50%;
+  margin: auto;
+  color: white;
+  font-size: 26px;
+  font-weight: 100;
+  text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_features {
+    width: 90%;
+  }
+}
+
+.checkout_leftside_79aday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  height: 20%;
+  margin: auto;
+  background-color: #22244a;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_79aday {
+    width: 40%;
+    height: 10%;
+  }
+}
+
+.checkout_leftside_79 {
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_79 {
+    font-size: 24px;
+  }
+}
+
+.checkout_leftside_aday {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.checkout_leftside_discountwrapper {
+  width: 50%;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_discountwrapper {
+    width: 100%;
+  }
+}
+
+.checkout_leftside_15percent {
+  margin: auto;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 10px 0px 0px;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_15percent {
+    padding: 0px 10px 0px 0px;
+  }
+}
+
+.checkout_leftside_discount_compared {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.checkout_leftside_upgradediv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 10%;
+  margin: auto;
+  background-color: #d6912a;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout_leftside_upgrade {
+  color: white;
+  font-size: 35px;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .checkout_leftside_upgrade {
+    font-size: 18px;
+  }
+}
+
+.checkout_rightside {
+  height: 100vh;
+  width: 45%;
+  border: 2px solid #7073a0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1330px) {
+  .checkout_rightside {
+    margin: auto;
+    width: 85%;
+  }
+}
+
+.checkout .checkout_btn {
+  background-color: #d6912a;
 }
 
 .footer {

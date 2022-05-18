@@ -1,0 +1,25 @@
+.addhotelicon {
+  font-size: 24px;
+}
+
+.admintable {
+  line-height: 3;
+}
+
+.addNew_Hotel {
+  margin-top: 40px;
+  background-color: rgba(214, 145, 42, 1);
+  border-radius: 10px;
+  padding: 15px;
+  width: 150px;
+
+  &:hover {
+    background-color: rgba(80, 155, 80, 0.483);
+  }
+}
+
+.trashicon {
+  &:hover {
+    color: rgba(255, 47, 0, 0.849);
+  }
+}

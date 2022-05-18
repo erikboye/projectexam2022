@@ -6,8 +6,16 @@ import HomepageCountries from "../components/homepage/homepagecountries";
 import Newsletter from "../components/homepage/newsletterform";
 import Footer from "../components/footer";
 
-export default function Homepage({ Featuredhotels }) {
-  console.log(Featuredhotels);
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:1337/hotels");
+  const data = await res.json();
+
+  return {
+    props: { hotels: data },
+  };
+};
+
+export default function Homepage({ Featuredhotels, hotels }) {
   return (
     <div>
       <Head>
@@ -16,7 +24,7 @@ export default function Homepage({ Featuredhotels }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Herobanner_Home />
+      <Herobanner_Home hotelsArray={hotels} />
       <FeaturedHotelCards className="featured" />
       <HomepageCountries />
       <Newsletter />

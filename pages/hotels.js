@@ -24,7 +24,7 @@ export default function Hotelspage({ hotels }) {
       </Head>
       <Navbar />
       <Herobanner_Hotels />
-      <Alternatives />
+      <Alternatives hotelsArray={hotels} />
       <div className="hotelcard_wrapper">
         {hotels.map(({ id, title, imageurl, location, description }) => (
           <HotelCardsComponent

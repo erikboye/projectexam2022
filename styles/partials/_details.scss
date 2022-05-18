@@ -8,9 +8,8 @@
   @media screen and (max-width: 1200px) {
     flex-direction: column;
 
-    &_img_div {
-      display: flex;
-      justify-content: center;
+    @media screen and (max-width: 800px) {
+      width: 100%;
     }
   }
 
@@ -112,8 +111,7 @@
     margin-top: 20px;
     justify-content: space-between;
 
-    @media screen and (max-width: 1370px) {
-      margin-top: 30px;
+    @media screen and (max-width: 520px) {
     }
   }
 
@@ -122,6 +120,10 @@
     width: 30px;
     color: rgb(0, 0, 0);
     margin: auto;
+
+    @media screen and (max-width: 520px) {
+      margin-top: 30px;
+    }
   }
 
   &_icontext {

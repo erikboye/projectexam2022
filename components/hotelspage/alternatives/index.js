@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import Select from "react-dropdown-select";
-import { useState, useEffect } from "react";
+import Select from "react-select";
+import Link from "next/link";
 
-function Alternatives() {
+function Alternatives({ hotelsArray }) {
+  const sortedArray = hotelsArray.map((elm) => {
+    return { value: elm.title, label: elm.title };
+  });
+  console.log("sortedArray", sortedArray);
+  const [selectedOption, setSelectedOption] = useState(null);
   return (
     <div className="p-10">
       <div className="container mx-auto flex justify-center items-center p-2 md:p-0">
@@ -11,10 +16,13 @@ function Alternatives() {
           {/* SEARCHBAR HOTELPAGE */}
           <form className="d-flex searchbar mx-auto">
             <div className="alternatives_wrapper">
-              {/* <Select
-                options={hotels.map.title}
-                onChange={(values) => this.setValues(values)}
-              /> */}
+              <Select
+                className="herobanner_searchbar"
+                options={sortedArray}
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                placeholder="Lets find a hotel"
+              />
               <button
                 className="alternatives_searchbtn btn-outline-success"
                 type="submit"
