@@ -4,7 +4,7 @@ import BasicTabs from "../components/adminpage";
 import Footer from "../components/footer";
 import nookies, { parseCookies } from "nookies";
 
-export default function Dashboard({ hotels, jwt }) {
+export default function Dashboard({ hotels, jwt, messages }) {
   return (
     <div>
       <Head>
@@ -13,7 +13,7 @@ export default function Dashboard({ hotels, jwt }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminNavbar />
-      <BasicTabs jwt={jwt} hotels={hotels} />
+      <BasicTabs jwt={jwt} hotels={hotels} messages={messages} />
       <Footer />
     </div>
   );
@@ -48,7 +48,18 @@ export const getServerSideProps = async (ctx) => {
   const res = await fetch("http://localhost:1337/hotels");
   const data = await res.json();
 
+  const messageResult = await fetch("http://localhost:1337/messages");
+  const messageData = await messageResult.json();
+
+  const enquiriesResult = await fetch("http://localhost:1337/enquiries");
+  const enquiriesData = await enquiriesResult.json();
+
   return {
-    props: { hotels: data, jwt },
+    props: {
+      hotels: data,
+      jwt,
+      messages: messageData,
+      enquiries: enquiriesData,
+    },
   };
 };

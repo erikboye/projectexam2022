@@ -20,7 +20,7 @@
 }
 
 .modal {
-  width: 300px;
+  width: 500px;
   height: 250px;
   background: white;
   color: white;
@@ -97,9 +97,9 @@
 //ADD HOTEL-MODAL
 
 .hotelmodal {
-  width: 350px;
-  height: 500px;
-  background-color: rgb(179, 179, 185);
+  width: 360px;
+  height: 400px;
+  background-color: rgb(84, 167, 160);
   color: rgb(0, 0, 0);
   z-index: 10;
   border-radius: 10px;
@@ -116,7 +116,8 @@
 }
 
 .createhotel_btn {
-  background-color: rgb(108, 214, 42);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid green;
   border-radius: 10px;
   padding: 15px;
   margin-top: 20px;

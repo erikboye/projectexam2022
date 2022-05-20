@@ -1,13 +1,14 @@
 import { Icon } from "@iconify/react";
 import { Navbar } from "../components/header";
+import { useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import Footer from "../components/footer";
+import React from "react";
+import EnquiriesModal from "../components/modals/enquiries";
 
 export const getStaticPaths = async () => {
   const res = await fetch("http://localhost:1337/hotels");
   const data = await res.json();
-
   const paths = data.map((hotel) => {
     return {
       params: { id: hotel.id.toString() },
@@ -33,6 +34,7 @@ export const getStaticProps = async (context) => {
 const Details = ({
   hotels: { title, description, imageurl, map, infoabout, location, rating },
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <Head>
@@ -63,12 +65,16 @@ const Details = ({
           <p className="details_price">875,- a day</p>
           <p className="details_price">750,- a day, for 7 days</p>
           <div className="details_buttons">
-            <Link href={`/hotels`}>
-              <a>
-                <button className="details_booknowbtn">Book now</button>
-                <button className="details_contactbtn">Contact hotel</button>
-              </a>
-            </Link>
+            <a>
+              <button className="details_booknowbtn">Book now</button>
+              <button
+                className="details_contactbtn"
+                onClick={() => setIsOpen(true)}
+              >
+                Contact hotel
+              </button>
+              {isOpen && <EnquiriesModal setIsOpen={setIsOpen} />}
+            </a>
           </div>
           <div className="details_infowrapper">
             <div>

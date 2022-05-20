@@ -43,7 +43,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs({ hotels, jwt }) {
+export default function BasicTabs({ hotels, jwt, messages }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -70,6 +70,7 @@ export default function BasicTabs({ hotels, jwt }) {
             <th className="w-52">Price</th>
             <th className="w-52">Location</th>
             <th className="w-80">Adress</th>
+            <th className="w-80">Imageurl</th>
           </tr>
           {hotels.map((hotel) => (
             <Table key={hotel.id} jwt={jwt} hotel={hotel} />
@@ -81,10 +82,34 @@ export default function BasicTabs({ hotels, jwt }) {
         {isOpen && <AddHotelModal jwt={jwt} setIsOpen={setIsOpen} />}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        MESSAGES
+        <table className="messageTable">
+          {" "}
+          <tr>
+            <th className="w-52">Message ID</th>
+            <th className="w-52">Name</th>
+            <th className="w-52">Subject</th>
+            <th className="w-52">Email</th>
+            <th className="w-80">Message</th>
+          </tr>
+          {messages.map((messages) => (
+            <MessageTable key={messages.id} jwt={jwt} messages={messages} />
+          ))}
+        </table>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        ENQUIRIES
+        <table className="messageTable">
+          {" "}
+          <tr>
+            <th className="w-52">Message ID</th>
+            <th className="w-52">Name</th>
+            <th className="w-52">Subject</th>
+            <th className="w-52">Email</th>
+            <th className="w-80">Message</th>
+          </tr>
+          {messages.map((enquiries) => (
+            <EnquiriesTable key={enquiries.id} enquiries={enquiries} />
+          ))}
+        </table>
       </TabPanel>
     </Box>
   );
@@ -93,16 +118,20 @@ export default function BasicTabs({ hotels, jwt }) {
 {
 }
 
-function Table({ jwt, hotel: { id, title, location, adress, price } }) {
+function Table({
+  jwt,
+  hotel: { id, title, location, adress, price, imageurl },
+}) {
   const router = useRouter();
 
   return (
     <tr className="wholeTable">
-      <td className=" w-52">{id}</td>
-      <td className="w-52">{title}</td>
-      <td className="w-52">{price}</td>
-      <td className="w-52">{location}</td>
-      <td className="w-52">{adress}</td>
+      <td className="text-center w-52">{id}</td>
+      <td className="text-center w-52">{title}</td>
+      <td className="text-center w-52">{price}</td>
+      <td className="text-center w-52">{location}</td>
+      <td className="text-center w-52">{adress}</td>
+      <td className="text-center w-52">{imageurl}</td>
       <td className="w-52">
         <button
           onClick={() => {
@@ -115,12 +144,101 @@ function Table({ jwt, hotel: { id, title, location, adress, price } }) {
                   },
                 }
               );
-
               alert("Hotel is successfully deleted");
               router.replace(router.asPath);
             }
             deletedata();
             console.log(id);
+          }}
+        >
+          {" "}
+          <Icon
+            className="trashicon"
+            icon="ant-design:delete-filled"
+            color="red"
+          />
+        </button>
+      </td>
+    </tr>
+  );
+}
+
+function MessageTable({
+  jwt,
+  messages: { id, Name, Subject, Message, Email },
+}) {
+  const router = useRouter();
+  console.log("jwt", jwt);
+  return (
+    <tr className="wholeMessageTable">
+      <td className="text-center w-52">{id}</td>
+      <td className="text-center w-52">{Name}</td>
+      <td className="text-center w-52">{Subject}</td>
+      <td className="text-center w-52">{Email}</td>
+      <td className="text-center w-52">{Message}</td>
+      <td className="w-52">
+        <button
+          onClick={() => {
+            async function deleteMessage() {
+              let response = await axios.delete(
+                `http://localhost:1337/messages/${id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${jwt}`,
+                  },
+                }
+              );
+              console.log(response);
+              alert("Message is fully deleted");
+              router.replace(router.asPath);
+            }
+            deleteMessage();
+          }}
+        >
+          {" "}
+          <Icon
+            className="trashicon"
+            icon="ant-design:delete-filled"
+            color="red"
+          />
+        </button>
+      </td>
+    </tr>
+  );
+}
+
+function EnquiriesTable({
+  jwt,
+  enquiries: { id, FirstName, LastName, Subject, Message },
+}) {
+  const router = useRouter();
+  console.log("jwt", jwt);
+  return (
+    <tr className="wholeEnquiriesTable">
+      <td className="text-center w-52">{id}</td>
+      <td className="text-center w-52">{FirstName}</td>
+      <td className="text-center w-52">{LastName}</td>
+      <td className="text-center w-52">{Subject}</td>
+      <td className="text-center w-52">{Message}</td>
+      <td className="w-52">
+        <button
+          onClick={() => {
+            console.log(id);
+            async function deleteEnquiries() {
+              let response = await axios.delete(
+                `http://localhost:1337/enquiries/${id}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${jwt}`,
+                  },
+                }
+              );
+
+              console.log(response);
+              alert("Enquirie is deleted");
+              router.replace(router.asPath);
+            }
+            deleteEnquiries();
           }}
         >
           {" "}
