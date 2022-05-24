@@ -7,12 +7,13 @@
 }
 
 .herobanner_searchbar {
-  height: 50px;
+  height: 10px;
   width: 220px;
   font-size: 17px;
 
   @media screen and (max-width: 450px) {
     width: 100px;
+    display: flex;
   }
 }
 
@@ -26,5 +27,36 @@
 
   &:hover {
     background-color: rgba(214, 145, 42, 1);
+  }
+
+  @media screen and (max-width: 455px) {
+    display: none;
+  }
+}
+
+.alternatives_wrapper {
+  @media screen and (max-width: 455px) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.css-1s2u09g-control {
+  @media screen and (max-width: 455px) {
+    width: 300px !important;
+  }
+}
+
+.css-319lph-ValueContainer {
+  @media screen and (max-width: 455px) {
+    margin: auto;
+  }
+}
+
+.css-14el2xx-placeholder,
+.css-319lph-ValueContainer .css-tlfecz-indicatorContainer,
+.css-1okebmr-indicatorSeparator {
+  @media screen and (max-width: 455px) {
+    display: none;
   }
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Select from "react-select";
-import Link from "next/link";
 
 function Alternatives({ hotelsArray }) {
   const sortedArray = hotelsArray.map((elm) => {

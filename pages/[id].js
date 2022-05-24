@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../components/footer";
 import React from "react";
 import EnquiriesModal from "../components/modals/enquiries";
+import CheckoutForm from "../components/modals/checkoutModal";
 
 export const getStaticPaths = async () => {
   const res = await fetch("http://localhost:1337/hotels");
@@ -35,6 +36,7 @@ const Details = ({
   hotels: { title, description, imageurl, map, infoabout, location, rating },
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [checkoutModalisOpen, setCheckoutModalIsOpen] = useState(false);
   return (
     <div>
       <Head>
@@ -66,7 +68,15 @@ const Details = ({
           <p className="details_price">750,- a day, for 7 days</p>
           <div className="details_buttons">
             <a>
-              <button className="details_booknowbtn">Book now</button>
+              <button
+                className="details_booknowbtn "
+                onClick={() => setCheckoutModalIsOpen(true)}
+              >
+                Book now
+              </button>
+              {checkoutModalisOpen && (
+                <CheckoutForm setCheckoutModalIsOpen={setCheckoutModalIsOpen} />
+              )}
               <button
                 className="details_contactbtn"
                 onClick={() => setIsOpen(true)}

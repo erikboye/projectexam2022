@@ -4,7 +4,7 @@ import BasicTabs from "../components/adminpage";
 import Footer from "../components/footer";
 import nookies, { parseCookies } from "nookies";
 
-export default function Dashboard({ hotels, jwt, messages }) {
+export default function Dashboard({ hotels, jwt, messages, enquiries }) {
   return (
     <div>
       <Head>
@@ -13,7 +13,12 @@ export default function Dashboard({ hotels, jwt, messages }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AdminNavbar />
-      <BasicTabs jwt={jwt} hotels={hotels} messages={messages} />
+      <BasicTabs
+        jwt={jwt}
+        hotels={hotels}
+        messages={messages}
+        enquiries={enquiries}
+      />
       <Footer />
     </div>
   );

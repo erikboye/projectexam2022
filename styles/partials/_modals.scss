@@ -1,5 +1,4 @@
-//CHECKOUT-MODAL
-
+//MODAL
 .darkBG {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -13,20 +12,21 @@
 }
 
 .centered {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .modal {
-  width: 500px;
-  height: 250px;
+  width: 450px;
+  height: 200px;
   background: white;
   color: white;
-  z-index: 10;
+  z-index: 99;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  overflow-y: scroll;
 }
 
 .modalHeader {
@@ -47,7 +47,7 @@
 }
 
 .modalContent {
-  padding: 40px;
+  padding: 30px;
   color: #2c3e50;
   text-align: center;
 }
@@ -95,36 +95,250 @@
 }
 
 //ADD HOTEL-MODAL
-
 .hotelmodal {
-  width: 360px;
-  height: 400px;
-  background-color: rgb(84, 167, 160);
-  color: rgb(0, 0, 0);
-  z-index: 10;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.8);
-  text-align: center;
+  padding: 20px;
+  width: 700px;
+  display: block;
+  background-color: rgb(255, 255, 255);
 }
 
 .createnewhotel_title {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   width: 100%;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.addHotel_input {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(229, 224, 224);
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .createhotel_btn {
-  background-color: rgb(255, 255, 255);
-  border: 2px solid green;
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 20px;
-  width: 200px;
+  height: 50px;
+  width: 30%;
+  background-color: rgba(214, 145, 42, 1);
+  color: rgba(34, 36, 74, 1);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-top: 10px;
 
   &:hover {
-    background-color: rgba(45, 201, 45, 0.902);
-    color: white;
+    border: 1px solid rgb(9, 185, 9);
   }
+}
+
+//CHECKOUT
+.checkout {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 1400px;
+  min-width: 300px;
+  width: 90vw;
+  height: 90vh;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 880px) {
+    flex-direction: column-reverse;
+    height: 90vh;
+  }
+
+  &_leftside {
+    width: 50%;
+    background-color: rgba(112, 115, 160, 1);
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 880px) {
+      width: 90vw;
+    }
+
+    &_heading {
+      text-align: center;
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    &_miniheading_div {
+      padding: 20px 0px 80px;
+      width: 75%;
+    }
+
+    &_features {
+      width: 100%;
+      margin: auto;
+      color: white;
+      font-size: 26px;
+      font-weight: 100;
+      text-align: center;
+
+      @media screen and (max-width: 690px) {
+        font-size: 24px;
+      }
+    }
+
+    &_79aday {
+      display: flex;
+      width: 50%;
+      height: 20%;
+      margin: auto;
+      background-color: rgba(34, 36, 74, 1);
+      justify-content: center;
+      border-radius: 20px;
+      align-items: center;
+
+      @media screen and (max-width: 690px) {
+        width: 40%;
+        height: 10%;
+      }
+    }
+
+    &_79 {
+      color: white;
+      font-size: 64px;
+      font-weight: bold;
+      text-align: center;
+
+      @media screen and (max-width: 690px) {
+        font-size: 24px;
+      }
+    }
+
+    &_aday {
+      color: white;
+      font-size: 20px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    &_discountwrapper {
+      margin: 20px auto 20px;
+      text-align: center;
+
+      @media screen and (max-width: 690px) {
+        width: 100%;
+      }
+    }
+
+    &_15percent {
+      margin: auto;
+      color: rgb(0, 0, 0);
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 10px 0px 0px;
+
+      @media screen and (max-width: 690px) {
+        padding: 0px 10px 0px 0px;
+      }
+    }
+
+    &_discount_compared {
+      color: white;
+      font-size: 20px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    &_upgradediv {
+      display: flex;
+      width: 60%;
+      height: 50px;
+      margin: 20px auto 0px;
+      background-color: rgba(214, 145, 42, 1);
+      justify-content: center;
+      border-radius: 10px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &_upgrade {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+
+      @media screen and (max-width: 690px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &_rightside {
+    width: 50%;
+    border: 5px solid rgba(112, 115, 160, 1);
+    padding: 5px 10px 5px 10px;
+
+    @media screen and (max-width: 880px) {
+      width: 90vw;
+    }
+
+    &_form {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_input {
+      width: 100%;
+      padding: 10px;
+      height: 50px;
+      border-radius: 8px;
+      background-color: rgb(229, 224, 224);
+      margin-bottom: 15px;
+    }
+
+    &_year,
+    &_expiration {
+      padding: 10px;
+      height: 50px;
+      width: 49%;
+      border-radius: 8px;
+      background-color: rgb(229, 224, 224);
+    }
+  }
+}
+
+.paynow_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 25px 0px 25px 30px;
+}
+
+.paynow_btn {
+  background-color: rgba(214, 145, 42, 1);
+  border-radius: 10px;
+  padding: 10px;
+  width: 237px;
+
+  &:hover {
+    transform: var(--bounce);
+    transition: var(--transition);
+    color: rgb(255, 255, 255);
+    font-weight: 00;
+  }
+}
+
+.checkout_datepicker {
+  padding-top: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.checkout_bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 15px;
 }

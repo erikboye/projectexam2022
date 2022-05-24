@@ -4,11 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
     margin: auto;
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 800px) {
       display: block;
+      width: 100%;
     }
   }
 
@@ -19,23 +20,30 @@
   }
 
   &_contactform {
-    padding: 30px;
+    height: 400px;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    background-color: rgb(255, 255, 255);
     margin-top: 100px;
-    border-top: 2px solid #9f8561;
+    border-top: 3px solid #9f8561;
 
     @media screen and (max-width: 1300px) {
       margin: 40px 0px 0px 0px;
-      border-top: 4px solid #9f8561;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin: 40px 0px 0px 0px;
     }
   }
 
   &_title {
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgba(57, 116, 203, 1);
 
     @media screen and (max-width: 1300px) {
       margin-top: 20px;
-      font-size: 1.2rem;
+      font-size: 2rem;
     }
   }
 
@@ -49,7 +57,11 @@
   }
 
   &_icon {
-    font-size: 25px;
+    font-size: 2rem;
+
+    @media screen and (max-width: 40px) {
+      font-size: 2rem;
+    }
   }
   &_sendbtn {
     background-color: rgba(214, 145, 42, 1);

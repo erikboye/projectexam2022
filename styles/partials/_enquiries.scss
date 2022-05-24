@@ -1,0 +1,57 @@
+.enquries_h1 {
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.enquries_title {
+  margin-top: 25px;
+}
+
+.createEnquiriesform {
+  padding: 20px;
+  width: 700px;
+  display: block;
+  background-color: rgb(255, 255, 255);
+}
+
+.enquiries_input {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(229, 224, 224);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.enquiries_input_msg {
+  height: 150px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(229, 224, 224);
+}
+
+.enquiries_tite {
+  color: rgb(255, 255, 255);
+}
+
+.sendEnquiries_btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sendEnquiries_btn {
+  height: 50px;
+  width: 30%;
+  background-color: rgba(214, 145, 42, 1);
+  color: rgba(34, 36, 74, 1);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  &:hover {
+    border: 1px solid rgb(9, 185, 9);
+  }
+}

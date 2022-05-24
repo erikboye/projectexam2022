@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { BASE_URL } from "../../config/configs";
 
 const SignupSchema = Yup.object().shape({
   Name: Yup.string()
@@ -67,7 +68,7 @@ function messagesForm() {
             onSubmit={(messageToPrimaVera) => {
               async function sendMessage() {
                 let response = await axios.post(
-                  `http://localhost:1337/messages`,
+                  `${BASE_URL}/messages`,
                   messageToPrimaVera
                 );
                 console.log(response);

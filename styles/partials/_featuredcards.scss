@@ -12,12 +12,13 @@
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding: 20px;
     border: 2px solid rgba(214, 145, 42, 0.3);
     background-color: rgba(159, 159, 159, 0.116);
     justify-content: space-between;
 
     @media screen and (max-width: 800px) {
-      width: 80%;
+      width: 95%;
       margin-bottom: 50px;
     }
   }
@@ -32,11 +33,10 @@
   }
 
   &_description {
-    padding: 10px;
-
     @media screen and (max-width: 1200px) {
-      width: 80%;
+      width: 95%;
       margin: auto;
+      padding: none;
     }
   }
 
@@ -46,8 +46,8 @@
   }
 
   &_btn {
-    height: 40px;
-    width: 25%;
+    height: 55px;
+    width: 45%;
     color: white;
     background-color: rgb(214, 145, 42);
     border: 2px solid transparent;

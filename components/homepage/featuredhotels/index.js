@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
+// import { BASE_URL } from "../../config/configs";
 
 const FeaturedHotelCards = () => {
   const [api, setApi] = useState(null);

@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { BASE_URL } from "../../config/configs";
 
 const SignupSchema = Yup.object().shape({
   FirstName: Yup.string()
@@ -22,13 +23,12 @@ const SignupSchema = Yup.object().shape({
     .required("Required"),
 });
 
-const EnquiriesModal = ({ setIsOpen, jwt }) => {
+const EnquiriesModal = ({ setIsOpen }) => {
   return (
     <>
       <div className={"darkBG"} onClick={() => setIsOpen(false)} />
       <div className={"centered"}>
         <div className={"enquiriesmodal"}>
-          <h1 className="createnewhotel_title">Contact Hotel</h1>
           <Formik
             initialValues={{
               FirstName: "",
@@ -41,7 +41,7 @@ const EnquiriesModal = ({ setIsOpen, jwt }) => {
               console.log(enquiriesMessages);
               async function postEnquiries() {
                 let response = await axios.post(
-                  `http://localhost:1337/enquiries`,
+                  `${BASE_URL}/enquiries`,
                   enquiriesMessages
                 );
                 alert(
@@ -53,29 +53,36 @@ const EnquiriesModal = ({ setIsOpen, jwt }) => {
           >
             {({ errors, touched }) => (
               <Form className="createEnquiriesform">
-                <h5>FirstName</h5>
-                <Field name="FirstName" />
+                <h1 className="enquries_h1">Contact Hotel</h1>
+                <h5 className="enquiries_title">FirstName</h5>
+                <Field className="enquiries_input" name="FirstName" />
                 {errors.FirstName && touched.FirstName ? (
                   <div>{errors.FirstName}</div>
                 ) : null}
-                <h5>LastName</h5>
-                <Field name="LastName" />
+                <h5 className="enquiries_title">LastName</h5>
+                <Field className="enquiries_input" name="LastName" />
                 {errors.LastName && touched.LastName ? (
                   <div>{errors.LastName}</div>
                 ) : null}
-                <h5>Subject</h5>
-                <Field name="Subject" />
+                <h5 className="enquiries_title">Subject</h5>
+                <Field className="enquiries_input" name="Subject" />
                 {errors.Subject && touched.Subject ? (
                   <div>{errors.Subject}</div>
                 ) : null}
-                <h5>Message</h5>
-                <Field name="Message" />
+                <h5 className="enquiries_title">Message</h5>
+                <Field
+                  className="enquiries_input_msg"
+                  component="textarea"
+                  name="Message"
+                />
                 {errors.Message && touched.Message ? (
                   <div>{errors.Message}</div>
                 ) : null}
-                <button className="sendEnquiries_btn" type="submit">
-                  Submit
-                </button>
+                <div className="sendEnquiries_btn_wrapper">
+                  <button className="sendEnquiries_btn" type="submit">
+                    Submit message
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>
