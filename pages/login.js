@@ -2,7 +2,6 @@ import Head from "next/head";
 import { Navbar } from "../components/header";
 import Footer from "../components/footer";
 import LoginComponent from "../components/login";
-import nookies from "nookies";
 
 export default function Loginpage() {
   return (

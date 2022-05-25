@@ -1,10 +1,22 @@
 .newsletter_form {
+  height: 100px;
+  margin-bottom: 30px;
+
   @media screen and (max-width: 800px) {
-    font-size: 0.8rem !important;
   }
 }
 
-.newsletter_form {
-  background-color: #fbf4ea;
-  height: 100px;
+.newsletterinput {
+  @media screen and (max-width: 444px) {
+    height: 100px;
+  }
+}
+
+.newsletter_signup_btn {
+  height: 60px;
+
+  @media screen and (max-width: 444px) {
+    padding: 10px 20px;
+    height: 100px;
+  }
 }
