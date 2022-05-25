@@ -1,6 +1,10 @@
 .signIn {
   &_wrapper {
     margin: 100px;
+
+    @media screen and (max-width: 670px) {
+      margin: 0px;
+    }
   }
 
   &_btn {
