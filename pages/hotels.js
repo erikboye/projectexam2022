@@ -1,12 +1,13 @@
 import Head from "next/head";
 import { Navbar } from "../components/header";
+import { BASE_URL } from "../config/configs";
 import Herobanner_Hotels from "../components/hotelspage/herobanner";
 import Alternatives from "../components/hotelspage/alternatives";
 import HotelCardsComponent from "../components/hotelspage/hotelcards";
 import Footer from "../components/footer";
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:1337/hotels");
+  const res = await fetch(`${BASE_URL}/hotels`);
   const data = await res.json();
 
   return {

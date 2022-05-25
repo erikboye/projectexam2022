@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { BASE_URL } from "../../config/configs";
 import axios from "axios";
 
 const LoginComponent = () => {
@@ -147,7 +148,7 @@ export const getServerSideProps = async (ctx) => {
 
   if (cookies?.jwt) {
     try {
-      const { data } = await axios.get("${BASE_URL}users/me", {
+      const { data } = await axios.get(`${BASE_URL}/users/me`, {
         headers: {
           Authorization: `Bearer ${cookies.jwt}`,
         },

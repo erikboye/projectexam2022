@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Navbar } from "../components/header";
+import { BASE_URL } from "../config/configs";
 import Herobanner_Home from "../components/homepage/herobanner";
 import FeaturedHotelCards from "../components/homepage/featuredhotels";
 import HomepageCountries from "../components/homepage/homepagecountries";
@@ -7,7 +8,7 @@ import Newsletter from "../components/homepage/newsletterform";
 import Footer from "../components/footer";
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:1337/hotels");
+  const res = await fetch(`${BASE_URL}/hotels`);
   const data = await res.json();
 
   return {

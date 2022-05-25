@@ -2,6 +2,7 @@ import Head from "next/head";
 import { AdminNavbar } from "../components/header/admin";
 import BasicTabs from "../components/adminpage";
 import Footer from "../components/footer";
+import { BASE_URL } from "../config/configs";
 import nookies, { parseCookies } from "nookies";
 
 export default function Dashboard({ hotels, jwt, messages, enquiries }) {
@@ -30,7 +31,7 @@ export const getServerSideProps = async (ctx) => {
 
   if (jwt) {
     try {
-      const { data } = await axios.get("http://localhost:1337/users/me", {
+      const { data } = await axios.get(`${BASE_URL}/users/me`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
@@ -50,13 +51,13 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const res = await fetch("http://localhost:1337/hotels");
+  const res = await fetch(`${BASE_URL}/hotels`);
   const data = await res.json();
 
-  const messageResult = await fetch("http://localhost:1337/messages");
+  const messageResult = await fetch(`${BASE_URL}/messages`);
   const messageData = await messageResult.json();
 
-  const enquiriesResult = await fetch("http://localhost:1337/enquiries");
+  const enquiriesResult = await fetch(`${BASE_URL}/enquiries`);
   const enquiriesData = await enquiriesResult.json();
 
   return {

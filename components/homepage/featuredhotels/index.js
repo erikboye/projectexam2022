@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
-// import { BASE_URL } from "../../config/configs";
+import { BASE_URL } from "../../../config/configs";
 
 const FeaturedHotelCards = () => {
   const [api, setApi] = useState(null);
   useEffect(() => {
     async function getData() {
-      const res = await fetch("http://localhost:1337/hotels/");
+      const res = await fetch(`${BASE_URL}/hotels`);
       const data = await res.json();
       setApi(data);
     }
