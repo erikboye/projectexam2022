@@ -101,17 +101,13 @@ const Details = ({
               <p className="details_icontext">Pool</p>
             </div>
             <div>
-              <Icon className="details_icon" icon="dashicons:pets" />
-              <p className="details_icontext">Pet friendly</p>
-            </div>
-            <div>
               <Icon className="details_icon" icon="iconoir:air-conditioner" />
               <p className="details_icontext">Air-con</p>
             </div>
-            <div>
+            {/* <div>
               <Icon className="details_icon" icon="ri:24-hours-fill" />
               <p className="details_icontext">24hr front-desk</p>
-            </div>
+            </div> */}
           </div>
         </div>{" "}
       </div>
