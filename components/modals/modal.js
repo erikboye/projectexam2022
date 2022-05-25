@@ -17,9 +17,9 @@ const Modal = ({ setIsOpen }) => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
                 d="M5 13l4 4L19 7"
               />
             </svg>
