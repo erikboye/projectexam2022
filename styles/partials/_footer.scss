@@ -31,8 +31,14 @@
     color: rgba(214, 145, 42, 0.8);
 
     @media screen and (max-width: 800px) {
-      padding-top: 30px;
-      font-size: 10px;
+      padding-top: 40px;
+      font-size: 14px;
+    }
+  }
+
+  &_icon {
+    @media screen and (max-width: 800px) {
+      font-size: 30px;
     }
   }
 }
