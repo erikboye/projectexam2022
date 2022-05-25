@@ -7,6 +7,7 @@
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+    width: 90%;
 
     @media screen and (max-width: 800px) {
       width: 100%;
@@ -37,7 +38,8 @@
     font-weight: 400;
 
     @media screen and (max-width: 800px) {
-      width: 90%;
+      justify-content: center;
+      text-align: center;
     }
   }
 
@@ -64,6 +66,11 @@
   &_price {
     color: rgb(57, 115, 203);
     padding: 15px 0px 5px 0px;
+
+    @media screen and (max-width: 800px) {
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &_booknowbtn {
@@ -75,8 +82,9 @@
     border: 2px solid transparent;
 
     @media screen and (max-width: 1370px) {
+      margin-top: 30px;
       display: block;
-      width: 90%;
+      width: 100%;
     }
 
     &:hover {
@@ -101,7 +109,7 @@
     }
 
     @media screen and (max-width: 1370px) {
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -110,9 +118,6 @@
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
-
-    @media screen and (max-width: 520px) {
-    }
   }
 
   &_icon {
@@ -148,12 +153,17 @@
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+    width: 90%;
   }
 
   &_title {
     font-size: 2rem;
     font-weight: bold;
     color: rgba(57, 116, 203, 1);
+
+    @media screen and (max-width: 444px) {
+      font-size: 1.5rem;
+    }
   }
 
   &_description {
@@ -166,6 +176,7 @@
   }
 
   &_googlemapdiv {
+    margin-top: 30px;
     max-width: 500px;
   }
 

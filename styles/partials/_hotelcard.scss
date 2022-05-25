@@ -16,6 +16,8 @@
     display: block;
     text-align: center;
     margin: auto;
+    width: 100%;
+    padding: 20px 0px 80px 20px;
   }
 
   &_textdiv {
@@ -39,6 +41,7 @@
 
     @media screen and (max-width: 850px) {
       width: 70%;
+      margin-top: 20px;
 
       &:hover {
         width: 85%;
@@ -50,8 +53,10 @@
     width: 80%;
     font-weight: 300;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1200px) {
       width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
